@@ -1,5 +1,5 @@
 ---
-title: "Blitz Bearcat"
+title: "Sarah Alhusaynat"
 subtitle: "M.S. Data Science Candidate · Willamette University"
 image: images/profile.png
 about:
