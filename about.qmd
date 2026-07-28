@@ -7,17 +7,14 @@ about:
   image-width: 12em
 ---
 
-## Hi, I'm Blitz 👋
+## Hi, I'm Sarah 👋
 
-The home page is the ten-second version. This is the longer story — write it in
-your own voice.
+I am a data loving MBA DATA SCIENCE masters student at the end of my program.
 
-I came to data science from \[your path: a major, a job, a question that would
-not leave you alone\]. What keeps me here is \[the part of the work you genuinely
-enjoy — the modeling, the wrangling, the moment a chart makes something click\].
+I came to data science from being a pure data science undergrade and felt like I didnt want to do web development. What keeps me here is  the modeling, the wrangling, the moment a chart makes something come alive.
 
-At Willamette my focus has been \[your emphasis: forecasting, causal inference,
-NLP, data engineering, ...\]. My [capstone](capstone.qmd) is where that comes
+At Willamette my focus has been \ blending my MBA Finance into my Data Science. I love forecasting, causal inference,
+NLP and data engineering. My spokes capstone (capstone.qmd) is where that comes
 together.
 
 ### Beyond the terminal
