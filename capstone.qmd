@@ -1,84 +1,87 @@
 ---
-title: "Capstone: [Your Capstone Title]"
-subtitle: "A one-sentence hook: what you built and who it helps."
+title: "Capstone: Spokes Reproducible Board Reporting"
+subtitle: "An analytics pipeline and dashboard workflow for board-ready nonprofit reporting."
 date: 2026-07-27
 image: projects/capstone/featured.svg
-categories: [capstone, machine-learning, R]
+categories: [capstone, data-engineering, analytics]
 toc: true
 ---
 
-::: {.callout-note appearance="simple"}
-This is the anchor of your portfolio. A hiring manager who reads only one page
-should read this one. Replace every bracketed placeholder, then delete this note.
-:::
-
 ## The one-liner
 
-> We integrated **\[data sources\]** into **\[dataset\]** so that
-> **\[stakeholder\]** can **\[decision they can now make\]**.
+> We integrated QuickBooks Online and Lightspeed POS data into a reproducible
+> warehouse workflow so nonprofit leadership can track financial freshness,
+> coverage, and reporting readiness with confidence.
 
-**Role:** \[e.g. I led the data pipeline and validation.\]
-**Team:** \[solo, or name + link teammates.\]
-**Repo:** [github.com/your_github_username/your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
+**Role:** End-to-end owner for ETL scripts, warehouse loading logic, data-health dashboard checks, and reproducibility documentation.
+**Team:** Sarah Alhusaynat (individual capstone execution).
+**Project repo (public portfolio publication):** [sarahAl2.github.io](https://github.com/sarahAl2/sarahAl2.github.io)
 
 ## The question
 
-What problem were you solving, and why does it matter to a real stakeholder?
-Two or three sentences. No jargon a hiring manager would have to look up.
+How do we give board and operations stakeholders a reporting workflow they can
+trust without manual spreadsheet stitching each cycle? The project focused on
+automating ingestion, preserving reproducibility, and exposing data health in a
+way that is readable to non-technical decision-makers.
 
 ## The data
 
-Where the data came from, how much of it, and the one hard thing about it
-(missingness, joins across sources, scale, privacy). This is your data
-engineering story — the part the repo link backs up.
+- **Sources:** QuickBooks Online (finance), Lightspeed R-Series (POS), and
+  operational docs/runbooks.
+- **Warehouse layer:** Neon Postgres tables loaded by Python ETL scripts.
+- **Challenge addressed:** synchronizing data timeliness semantics (hour-level
+  freshness from `updated_at`) across ingestion code, dashboard queries, and
+  documentation.
 
 ## The approach
 
-Your method at portfolio depth: shorter than your M4 write-up, longer than a
-tweet. What did you try, what did you keep, and why.
+1. Built and validated ETL scripts with dry-run defaults and explicit `--load`
+   write behavior.
+2. Implemented idempotent-style upsert logic for recurrent sync paths where
+   appropriate.
+3. Added dashboard health checks to make freshness and coverage visible.
+4. Updated runbooks and source-of-truth documentation so another student can
+   reproduce the workflow without tribal knowledge.
 
 ## Findings
 
-Lead with your best figure or your architecture diagram.
+The project produced a reproducible pipeline and a decision-facing dashboard that
+made data recency and coverage auditable at a glance.
 
-![Replace with your key result or system diagram.](projects/capstone/featured.svg){fig-alt="Placeholder capstone figure" width="90%"}
+![Spokes pipeline and dashboard flow used in final reporting deliverables.](projects/capstone/featured.svg){fig-alt="Spokes pipeline architecture figure" width="90%"}
 
-State the finding in plain language, then the caveat. Sparse and true beats
-full and shaky.
+Key outcome: board-facing reporting moved from ad hoc assembly toward a repeatable workflow with documented handoff steps.
+
+Caveat: some upstream systems and credentials remain organization-bound, so full production execution depends on authorized access.
 
 ## The full write-up
 
-Pick the option that matches where your write-up lives, keep one, delete the rest.
+- [Read the final write-up (HTML)](projects/capstone/artifacts/writeup.html){.btn .btn-primary}
+- [Download the final write-up (PDF)](projects/capstone/artifacts/writeup.pdf){.btn .btn-outline-primary}
+- [Download the poster (PDF)](projects/capstone/artifacts/poster.pdf){.btn .btn-outline-primary}
 
-::: {.panel-tabset}
+<iframe src="projects/capstone/artifacts/writeup.pdf" width="100%" height="800px" style="border: 1px solid #ddd;"></iframe>
 
-### A · Native Quarto
+## Reproducibility
 
-If your write-up is a `.qmd`, copy it into `projects/capstone/index.qmd` and
-link it, or fold its sections directly into this page. Set `eval: false` (or
-rely on `freeze`) on any chunk that needs data the public repo does not contain.
+To reproduce the core workflow at a high level:
 
-### B · Embedded PDF
+1. Clone the project repository and open it in VS Code.
+2. Install required dependencies for the ETL and render stack.
+3. Run ingestion scripts in dry-run mode first, then run load mode only after validation.
+4. Re-render deliverables and compare dashboard freshness/coverage outputs.
 
-```markdown
-[Download the write-up (PDF)](projects/capstone/writeup.pdf){.btn .btn-primary}
+For environment-specific details, use the documented runbooks and notes included with the published materials.
 
-<iframe src="projects/capstone/writeup.pdf" width="100%" height="800px"
-  style="border: 1px solid #ddd;"></iframe>
-```
+## Ethics, licensing, and attribution
 
-### C · Published Google Doc
-
-```markdown
-[Read the full write-up](https://docs.google.com/document/d/e/XXXX/pub){.btn .btn-primary}
-
-<iframe src="https://docs.google.com/document/d/e/XXXX/pub?embedded=true"
-  width="100%" height="800px" style="border: 1px solid #ddd;"></iframe>
-```
-
-:::
+- Data rights and system access remain with the source organizations and platform terms.
+- No secrets, private credentials, or protected internal tokens are published on this site.
+- This public page provides artifacts and methods for academic and portfolio review; production operations require authorized access.
+- Platform and tool attributions include Quarto, GitHub Pages, Neon Postgres, and Grafana.
 
 ## Dig deeper
 
-- 📦 **Code & pipeline:** [your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
-- 📊 **Slides / poster:** \[link if you have one\]
+- **Code & publication repo:** [github.com/sarahAl2/sarahAl2.github.io](https://github.com/sarahAl2/sarahAl2.github.io)
+- **Poster artifact:** [projects/capstone/artifacts/poster.pdf](projects/capstone/artifacts/poster.pdf)
+- **Write-up artifacts:** [projects/capstone/artifacts/writeup.html](projects/capstone/artifacts/writeup.html) and [projects/capstone/artifacts/writeup.pdf](projects/capstone/artifacts/writeup.pdf)

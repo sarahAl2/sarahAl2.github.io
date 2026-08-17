@@ -7,26 +7,37 @@ about:
   image-width: 12em
 ---
 
-## Hi, I'm Sarah 👋
+## Hi, I'm Sarah
 
-I am a data loving MBA DATA SCIENCE masters student at the end of my program.
+The home page is the ten-second version. This is the longer story.
 
-I came to data science from being a pure data science undergrade and felt like I didnt want to do web development. What keeps me here is  the modeling, the wrangling, the moment a chart makes something come alive.
+I am an M.S. Data Science candidate at Willamette University with a strong
+interest in reproducible analytics for mission-driven organizations. What keeps
+me in this work is turning messy operational data into reporting that leaders
+can trust and act on.
 
-At Willamette my focus has been \ blending my MBA Finance into my Data Science. I love forecasting, causal inference,
-NLP and data engineering. My spokes capstone (capstone.qmd) is where that comes
-together.
+At Willamette, my emphasis has been data engineering, SQL-based warehouse
+modeling, and dashboard quality assurance. My [capstone](capstone.qmd) brings
+those areas together through an end-to-end reporting workflow for The Northwest
+Hub.
+
+### About the team
+
+Spokes is a one-person capstone build led by Sarah Alhusaynat.
+
+- Designed and validated ETL pulls from QuickBooks Online and Lightspeed.
+- Modeled warehouse tables in Neon Postgres for board-reporting workflows.
+- Built and verified Grafana data-health dashboards and artifact documentation.
 
 ### Beyond the terminal
 
-- 🌲 \[Something human — a hobby, a place, a cause.\]
-- 📚 \[Currently reading / learning / building.\]
-- 🎯 \[What you want to be doing in two years.\]
+- I enjoy community-centered projects and practical tools that reduce manual reporting work.
+- I am currently deepening skills in analytics engineering and production data workflows.
+- In the next two years, I want to contribute to data platforms that improve transparency and decisions in public-interest settings.
 
 ### Get in touch
 
-I'm happy to talk about \[data work, collaborations, roles\].
+I am happy to connect about data work, collaborations, and early-career roles.
 
-- ✉️ [you@willamette.edu](mailto:you@willamette.edu)
-- 💼 [LinkedIn](https://linkedin.com/in/your_github_username)
-- 💻 [GitHub](https://github.com/your_github_username)
+- [saalhusaynat@willamette.edu](mailto:saalhusaynat@willamette.edu)
+- [GitHub](https://github.com/sarahAl2)

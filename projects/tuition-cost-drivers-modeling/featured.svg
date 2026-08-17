@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Tuition Cost Drivers and Predictive Modeling cover">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <g fill="none" stroke="#bfdbfe" stroke-width="3" opacity="0.6">
+    <polyline points="90,460 230,430 370,360 510,340 650,300 790,260 930,210 1070,180"/>
+    <line x1="90" y1="500" x2="1070" y2="500"/>
+    <line x1="90" y1="500" x2="90" y2="180"/>
+  </g>
+  <text x="90" y="145" fill="#eff6ff" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700">
+    Tuition Cost Drivers
+  </text>
+  <text x="90" y="208" fill="#dbeafe" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="600">
+    and Predictive Modeling (R)
+  </text>
+  <text x="90" y="282" fill="#bfdbfe" font-family="Helvetica, Arial, sans-serif" font-size="28">
+    2011-2021 data • Reproducible report • Cost insights
+  </text>
+</svg>

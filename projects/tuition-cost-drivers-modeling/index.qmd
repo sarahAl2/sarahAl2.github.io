@@ -1,0 +1,31 @@
+---
+title: "Tuition Cost Drivers and Predictive Modeling"
+description: "Examined multi-year tuition and living-cost data in R to identify major cost drivers and communicate practical savings insights."
+date: 2025-12-10
+image: featured.svg
+categories: [course-work, r, statistical-modeling, data-visualization]
+---
+
+## What it is
+
+This project examined tuition, demographic, and institutional data from
+2011-2021 to study the drivers of rising college costs. The objective was to
+build a reproducible analysis that could support both technical and
+non-technical audiences.
+
+## What I did
+
+- Cleaned and modeled multi-year tuition and demographic datasets in R.
+- Analyzed relationships between living arrangements and tuition-related costs.
+- Produced a reproducible RMarkdown report with visuals and interpretation.
+
+## Outcome
+
+The project identified steady annual living-cost increases and estimated that
+students living off-campus with family could save approximately $13,000 per
+year compared to on-campus housing.
+
+## Links
+
+- [Portfolio repository](https://github.com/sarahAl2/sarahAl2.github.io)
+- [Capstone page](../../capstone.qmd)

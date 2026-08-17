@@ -9,51 +9,51 @@ about:
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/your_github_username
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/your_github_username
+      href: https://github.com/sarahAl2
     - icon: envelope
       text: Email
-      href: mailto:you@willamette.edu
-    - icon: file-earmark-pdf
-      text: Resume
-      href: resume.qmd
+      href: mailto:saalhusaynat@willamette.edu
 ---
 
-I build data pipelines and turn messy data into decisions people can act on.
-Right now I am finishing my M.S. in Data Science at **Willamette University**,
-where my capstone [predicts \[your one-line problem\]](capstone.qmd) for
-\[your stakeholder\].
+## Spokes: Reproducible Board Reporting for The Northwest Hub
 
-I care about \[topics you actually care about — e.g. housing, health equity,
-sports analytics\], reproducible workflows, and explaining a model to the person
-who has to trust it.
+Team: Sarah Alhusaynat (data pipeline, warehouse modeling, dashboard QA, documentation).
 
-**Currently looking for** \[data analyst / data scientist / ML engineer\] roles
-starting \[month year\]. [Get in touch](about.qmd) or grab my
-[resume](resume.qmd).
+Spokes is an end-to-end analytics workflow that combines QuickBooks Online,
+Lightspeed R-Series POS, and Neon Postgres into a board-ready Grafana dashboard.
+The goal is simple: decision-ready reporting with reproducible pipeline steps and
+clear operational runbooks.
+
+### One-click project artifacts
+
+- [Final project page](capstone.qmd)
+- [Portfolio repository (public)](https://github.com/sarahAl2/sarahAl2.github.io)
+- [Live dashboard](https://spokes-grafana.fly.dev/d/data_health_checks/data-health-checks?orgId=1)
+- [Final write-up (HTML)](projects/capstone/artifacts/writeup.html)
+- [Final write-up (PDF)](projects/capstone/artifacts/writeup.pdf)
+- [Poster (PDF)](projects/capstone/artifacts/poster.pdf)
+- [About me](about.qmd)
 
 ---
 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}
-### 🎓 Education
-M.S. Data Science
-Willamette University, 2026
+### Outcome
+Hourly freshness checks and source coverage views that are readable for board,
+staff, and grant-writing workflows.
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-### 🛠️ Toolkit
-R · Python · SQL
-Quarto · Git · \[add yours\]
+### Stack
+Python · SQL · Neon Postgres
+GitHub Actions · Grafana · Quarto
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-### 📍 Based in
-Salem, OR
-Open to \[remote / relocation\]
+### Reproducibility
+Documented runbooks, dry-run defaults, and clear load commands so a peer can
+clone the repo and reproduce key outputs.
 :::
 
 :::

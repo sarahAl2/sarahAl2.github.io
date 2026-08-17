@@ -1,0 +1,32 @@
+---
+title: "Mental and Overall Health Predictive Modeling"
+description: "Analyzed a 3,000+ response wellness survey to identify predictors of mental and physical health outcomes using Python."
+date: 2025-12-15
+image: featured.svg
+categories: [course-work, python, statistical-modeling, data-visualization]
+---
+
+## What it is
+
+This project analyzed a large wellness survey to understand which factors were
+most associated with mental and physical health outcomes. The goal was to turn
+messy survey data into actionable insight through reproducible analysis and
+clear reporting.
+
+## What I did
+
+- Cleaned and structured a 3,000+ response dataset for analysis.
+- Performed correlation analysis, demographic segmentation, and regression modeling.
+- Built visual summaries including heatmaps to communicate key relationships.
+
+## Outcome
+
+The analysis revealed strong links between declining mental and physical health
+for adults ages 56+, and highlighted geographic segments with lower mental
+health scores. I translated model and trend outputs into clear findings for
+non-technical decision-makers.
+
+## Links
+
+- [Portfolio repository](https://github.com/sarahAl2/sarahAl2.github.io)
+- [Capstone page](../../capstone.qmd)

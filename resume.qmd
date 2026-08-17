@@ -3,7 +3,7 @@ title: "Resume"
 toc: true
 ---
 
-[📄 Download PDF](assets/resume.pdf){.btn .btn-primary role="button"}
+[Download PDF](assets/resume.pdf){.btn .btn-primary role="button"}
 
 ::: {.callout-note appearance="simple"}
 Drop your typeset resume at `assets/resume.pdf` and it appears below. Any PDF
@@ -17,30 +17,85 @@ web summary below is what recruiters skim; the PDF is what they download.
 
 ## Education
 
-**M.S. Data Science** — Willamette University, Salem, OR *(2026)*
-**B.S. \[Your Major\]** — \[Your University\], \[City\] *(\[year\])*
+**MBA / M.S. Data Science** — Willamette University, Salem, OR *(2024-2026)*
+**B.S. Computer Science** (Minors: Visual Arts, Psychological Education) — The College of Idaho, Caldwell, ID *(2020-2024)*
+
+## Professional Summary
+
+MBA/MSDS candidate experienced in statistical modeling, visualization, and
+reproducible analytics using Python, SQL, and R. I enjoy learning modern data
+tools to produce clear visualizations, documentation, and demos that support
+data-driven product decisions and big-picture problem solving.
 
 ## Skills
 
 | Area | Tools |
 |------|-------|
 | **Languages** | R, Python, SQL |
-| **Data & ML** | \[tidyverse / pandas, scikit-learn, ...\] |
-| **Workflow** | Git, Quarto, \[Docker, cloud, ...\] |
+| **Data & ML** | Exploratory Data Analysis (EDA), statistical modeling, data cleaning, data transformation |
+| **Workflow** | Git, Quarto, Jupyter Notebook, RStudio, RMarkdown, Google Colab, VS Code |
+| **Databases** | SQL for large-scale data analysis and database querying |
+| **Visualization** | Tableau, Python, R, Excel |
+| **Spoken Languages** | Arabic (fluent), English (professional), German (professional) |
 | **Communication** | Technical writing, data visualization |
 
 ## Experience
 
-**\[Job Title\]** — \[Organization\], \[Location\] *(\[dates\])*
+**Tech Safety Student Experience Intern** — The College of Idaho, Caldwell, ID *(Sep 2023-Dec 2023)*
 
-- Accomplishment framed as impact, not a task description.
-- Another accomplishment with a number in it if you have one.
+- Evaluated student-success technology features for usability and effectiveness using qualitative feedback and usage patterns.
+- Documented product recommendations that contributed to a 68% increase in platform engagement.
+- Led cybersecurity awareness sessions and provided weekend IT help-desk support for software, devices, and account access.
+
+**Peer Health Advocate** — The College of Idaho *(Aug 2021-Sep 2023)*
+
+- Led student advocacy programs focused on well-being, accessibility, and support services.
+- Guided students on accommodations and campus resources while maintaining confidentiality in sensitive cases.
+- Supported 24/7 emergency phone and front-desk coverage.
+
+**Testing Center Proctor and Operator** — The College of Idaho *(Aug 2021-Sep 2023)*
+
+- Coordinated accommodations and inclusion practices during testing periods.
+- Proctored exams with strict scheduling and operational reliability.
+- Contributed to monthly quality-improvement meetings and reporting.
+
+**Treasurer, Atkinson Marketing Association (AMA)** — Willamette University *(Oct 2024-Present)*
+
+- Supported event planning and financial allocation for student programs.
+- Promoted events through digital channels to improve engagement and visibility.
+
+**Communication Chair, Technology Business Association (BTA)** — Willamette University *(Oct 2024-Present)*
+
+- Managed social media communications and engagement strategies.
+- Improved digital outreach and student participation.
+
+**Art Club President** — The College of Idaho *(Aug 2022-Sep 2023)*
+
+- Organized weekly meetings and collaborative creative programming.
+- Managed activity planning and member communications across campus resources.
+- Coordinated events and workshops to expand participation and inclusive access.
+
+
 
 ## Projects
 
-**\[Capstone Title\]** — see the [Capstone page](capstone.qmd) for the full story.
+**Spokes: Reproducible Board Reporting** — see the [Capstone page](capstone.qmd) for the full story.
 
-- One line on the problem and your role.
+- Built a reproducible analytics workflow integrating QuickBooks, Lightspeed, Neon Postgres, and Grafana for board-ready nonprofit reporting.
 
-*Placeholders in brackets are fine while you build. Replace them with real,
-defensible entries as they materialize — sparse and true beats full and shaky.*
+**Mental and Overall Health Predictive Modeling (Python)** — Willamette University *(Sep 2025-Dec 2025)*
+
+- Analyzed a 3,000+ response wellness survey to identify predictors of mental and physical health outcomes.
+- Applied data cleaning, correlation analysis, segmentation, heatmaps, and regression modeling.
+- Produced decision-ready visuals and reports, including findings on older-adult health trends and geographic disparities.
+
+**Tuition Cost Drivers and Predictive Modeling (R)** — Willamette University *(Sep 2025-Dec 2025)*
+
+- Analyzed multi-year tuition, demographic, and institutional data (2011-2021) to study cost drivers.
+- Built reproducible RMarkdown outputs and visualizations for technical and non-technical audiences.
+- Identified sustained living-cost increases and estimated approximately $13,000 annual savings for students living off-campus with family.
+
+## Contact
+
+- Email: [saalhusaynat@willamette.edu](mailto:saalhusaynat@willamette.edu)
+- LinkedIn: [www.linkedin.com/in/sarah-alhusaynat](https://www.linkedin.com/in/sarah-alhusaynat)
