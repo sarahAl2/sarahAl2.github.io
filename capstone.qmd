@@ -2,7 +2,7 @@
 title: "Capstone: Spokes Reproducible Board Reporting"
 subtitle: "An analytics pipeline and dashboard workflow for board-ready nonprofit reporting."
 date: 2026-07-27
-image: projects/capstone/poster-results.png
+image: projects/capstone/results-live-trend-obfuscated.svg
 categories: [capstone, data-engineering, analytics]
 toc: true
 ---
@@ -19,19 +19,16 @@ toc: true
 
 ## The question
 
-How do we give board and operations stakeholders a reporting workflow they can
-trust without manual spreadsheet stitching each cycle? The project focused on
-automating ingestion, preserving reproducibility, and exposing data health in a
-way that is readable to non-technical decision-makers.
+How can The Northwest Hub run a low-cost, reproducible reporting workflow, and
+what do trailing 90-day KPI and directional-change analyses reveal about recent
+performance?
 
 ## The data
 
-- **Sources:** QuickBooks Online (finance), Lightspeed R-Series (POS), and
-  operational docs/runbooks.
+- **Sources:** Lightspeed R-Series (POS)
 - **Warehouse layer:** Neon Postgres tables loaded by Python ETL scripts.
-- **Challenge addressed:** synchronizing data timeliness semantics (hour-level
-  freshness from `updated_at`) across ingestion code, dashboard queries, and
-  documentation.
+- **Dashboard layer:** Grafana hosted on fly.io
+- **Challenge addressed:** synchronizing data timeliness semantics (hour-level freshness from `updated_at`) across ingestion code, dashboard queries, and documentation.
 
 ## The approach
 
@@ -52,11 +49,11 @@ Live trend analytics were delivered as a rolling **90-day trailing** view so
 stakeholders can monitor movement over time rather than relying on one-point
 snapshots.
 
-![Poster excerpt highlighting the live 90-day trailing trend analytics and key findings used in final reporting.](projects/capstone/poster-results.png){fig-alt="Poster results figure with live trend analytics and findings" width="95%"}
+![Live trend analytics figure from the poster: trailing 90-day vs same period last year.](projects/capstone/results-live-trend-obfuscated.svg){fig-alt="Trailing 90-day versus same-period-last-year trend analytics figure" width="95%"}
 
 Key outcome: board-facing reporting moved from ad hoc assembly toward a repeatable workflow with documented handoff steps.
 
-Caveat: some upstream systems and credentials remain organization-bound, so full production execution depends on authorized access.
+Caveat: detailed record-level data and some financial result details are governed by NDA and source-system access restrictions, so this page presents only approved aggregate indicators. See the **Results highlights** section below for the public-facing summary.
 
 ## Results highlights
 
@@ -75,31 +72,68 @@ Caveat: some upstream systems and credentials remain organization-bound, so full
 
 ## Reproducibility
 
-To reproduce this published portfolio and capstone artifacts:
+This section refers to reproducing the **capstone workflow**, not only the
+website build.
 
-```bash
-git clone https://github.com/sarahAl2/sarahAl2.github.io.git
-cd sarahAl2.github.io
-quarto render
-quarto preview
-```
+### Public reproducibility (no credentials)
 
-For workflow details and setup notes, see the repository README:
-[github.com/sarahAl2/sarahAl2.github.io](https://github.com/sarahAl2/sarahAl2.github.io)
+You can reproduce the documented analysis path by using the published artifacts:
 
-For full project methods and implementation context, use the final write-up:
-[projects/capstone/artifacts/writeup.html](projects/capstone/artifacts/writeup.html)
+1. Review the methods and assumptions in the final write-up.
+2. Re-check the reported trend and change figures from the published visuals.
+3. Validate interpretation logic against the dashboard definitions and captions.
+
+Artifacts:
+
+- [Final write-up (HTML)](projects/capstone/artifacts/writeup.html)
+- [Final write-up (PDF)](projects/capstone/artifacts/writeup.pdf)
+- [Poster (PDF)](projects/capstone/artifacts/poster.pdf)
+
+### Authorized reproducibility (full pipeline rerun)
+
+With approved organizational access, a collaborator can reproduce the capstone
+pipeline end to end:
+
+1. Pull source data from Lightspeed/connected systems using project ETL scripts.
+2. Load transformed tables into Neon Postgres.
+3. Recompute freshness and coverage checks from `updated_at` semantics.
+4. Re-run dashboard queries and compare trend/change outputs to published
+   findings.
+5. Re-render final figures/write-up from the refreshed warehouse snapshot.
+
+Operational details are documented in the project runbooks and source-of-truth
+notes referenced in the write-up.
+
+### Automation workflow
+
+The capstone pipeline is designed to run as an automated operational cycle:
+
+1. **Trigger:** scheduled or manually dispatched GitHub Actions runs start ETL.
+2. **Ingest + transform:** Python scripts pull source snapshots and normalize
+   records for warehouse loading.
+3. **Load:** transformed outputs are written to Neon Postgres tables.
+4. **Validate:** freshness and coverage checks are computed from `updated_at`
+   semantics and compared against expected thresholds.
+5. **Serve analytics:** Grafana panels read warehouse outputs for board-facing
+   trend and change views.
+6. **Document + handoff:** run outcomes and caveats are captured in runbooks for
+   reproducible collaboration.
+
+Because source credentials are organization-controlled, public artifacts show the
+automation design and results while protected execution details remain internal.
 
 ## Ethics, licensing, and attribution
 
 - **Code and content license status:** No separate open-source license file is currently declared in this portfolio repository; content is shared for academic and portfolio review.
 - **Data rights and constraints:** Data rights and system access remain with source organizations and platform terms (QuickBooks Online and Lightspeed R-Series).
+- **Data ethics and decision impact:** Analyses should be used to support fair, transparent, and context-aware business decisions. Because transportation-related service decisions can directly affect community members who depend on these services, trends should be interpreted with stakeholder input, operational context, and clear communication of uncertainty rather than used as stand-alone directives.
 - **Privacy and security:** No secrets, private credentials, or protected internal tokens are published on this site.
 - **Use constraints:** Production execution of the full pipeline requires authorized organizational credentials and environment access.
 - **Attribution:** Platform/tool attributions include Quarto, GitHub Pages, Neon Postgres, and Grafana.
 
 ## Dig deeper
 
-- **Code & publication repo:** [github.com/sarahAl2/sarahAl2.github.io](https://github.com/sarahAl2/sarahAl2.github.io)
+- **Work repository (private):** [github.com/sarahAl2/spokes](https://github.com/sarahAl2/spokes)
+- **Access note:** The implementation repository is private and requires approval for access.
 - **Poster artifact:** [projects/capstone/artifacts/poster.pdf](projects/capstone/artifacts/poster.pdf)
 - **Write-up artifacts:** [projects/capstone/artifacts/writeup.html](projects/capstone/artifacts/writeup.html) and [projects/capstone/artifacts/writeup.pdf](projects/capstone/artifacts/writeup.pdf)

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">Live Trend Analytics: Trailing 90-Day vs Same Period Last Year (Obfuscated)</title>
+  <desc id="desc">Obfuscated trend panels showing indexed comparisons for sales, tickets, and average basket size.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+      .grid { stroke: #e2e8f0; stroke-width: 1; }
+      .axis { stroke: #64748b; stroke-width: 1.5; }
+      .h1 { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .sub { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+      .label { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #1e293b; }
+      .tick { font: 500 12px 'Segoe UI', Arial, sans-serif; fill: #64748b; }
+      .note { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .curr { stroke: #0d9488; stroke-width: 4; fill: none; }
+      .prior { stroke: #0284c7; stroke-width: 3; fill: none; stroke-dasharray: 7 5; }
+      .ly { stroke: #f59e0b; stroke-width: 3; fill: none; stroke-dasharray: 3 6; }
+      .dot-curr { fill: #0d9488; }
+      .dot-prior { fill: #0284c7; }
+      .dot-ly { fill: #f59e0b; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="620"/>
+
+  <text class="h1" x="40" y="46">Live Trend Analytics - Trailing 90-Day vs Same Period Last Year</text>
+  <text class="sub" x="40" y="74">Public-safe view: values are indexed and jittered (baseline = 100), preserving directional signal only.</text>
+
+  <rect class="panel" x="32" y="96" width="496" height="430" rx="14"/>
+  <rect class="panel" x="552" y="96" width="496" height="430" rx="14"/>
+  <rect class="panel" x="1072" y="96" width="496" height="430" rx="14"/>
+
+  <text class="label" x="56" y="126">Sales Trend (Indexed)</text>
+  <text class="label" x="576" y="126">Ticket Trend (Indexed)</text>
+  <text class="label" x="1096" y="126">Avg Basket Trend (Indexed)</text>
+
+  <!-- Panel 1 grid -->
+  <line class="grid" x1="72" y1="186" x2="496" y2="186"/>
+  <line class="grid" x1="72" y1="246" x2="496" y2="246"/>
+  <line class="grid" x1="72" y1="306" x2="496" y2="306"/>
+  <line class="grid" x1="72" y1="366" x2="496" y2="366"/>
+  <line class="grid" x1="72" y1="426" x2="496" y2="426"/>
+  <line class="axis" x1="72" y1="166" x2="72" y2="446"/>
+  <line class="axis" x1="72" y1="446" x2="496" y2="446"/>
+
+  <!-- Panel 2 grid -->
+  <line class="grid" x1="592" y1="186" x2="1016" y2="186"/>
+  <line class="grid" x1="592" y1="246" x2="1016" y2="246"/>
+  <line class="grid" x1="592" y1="306" x2="1016" y2="306"/>
+  <line class="grid" x1="592" y1="366" x2="1016" y2="366"/>
+  <line class="grid" x1="592" y1="426" x2="1016" y2="426"/>
+  <line class="axis" x1="592" y1="166" x2="592" y2="446"/>
+  <line class="axis" x1="592" y1="446" x2="1016" y2="446"/>
+
+  <!-- Panel 3 grid -->
+  <line class="grid" x1="1112" y1="186" x2="1536" y2="186"/>
+  <line class="grid" x1="1112" y1="246" x2="1536" y2="246"/>
+  <line class="grid" x1="1112" y1="306" x2="1536" y2="306"/>
+  <line class="grid" x1="1112" y1="366" x2="1536" y2="366"/>
+  <line class="grid" x1="1112" y1="426" x2="1536" y2="426"/>
+  <line class="axis" x1="1112" y1="166" x2="1112" y2="446"/>
+  <line class="axis" x1="1112" y1="446" x2="1536" y2="446"/>
+
+  <!-- Y ticks -->
+  <text class="tick" x="44" y="190">120</text>
+  <text class="tick" x="44" y="250">110</text>
+  <text class="tick" x="44" y="310">100</text>
+  <text class="tick" x="44" y="370">90</text>
+  <text class="tick" x="44" y="430">80</text>
+
+  <text class="tick" x="564" y="190">120</text>
+  <text class="tick" x="564" y="250">110</text>
+  <text class="tick" x="564" y="310">100</text>
+  <text class="tick" x="564" y="370">90</text>
+  <text class="tick" x="564" y="430">80</text>
+
+  <text class="tick" x="1084" y="190">120</text>
+  <text class="tick" x="1084" y="250">110</text>
+  <text class="tick" x="1084" y="310">100</text>
+  <text class="tick" x="1084" y="370">90</text>
+  <text class="tick" x="1084" y="430">80</text>
+
+  <!-- X ticks -->
+  <text class="tick" x="72" y="468">T-90</text>
+  <text class="tick" x="252" y="468">T-45</text>
+  <text class="tick" x="470" y="468">T</text>
+
+  <text class="tick" x="592" y="468">T-90</text>
+  <text class="tick" x="772" y="468">T-45</text>
+  <text class="tick" x="990" y="468">T</text>
+
+  <text class="tick" x="1112" y="468">T-90</text>
+  <text class="tick" x="1292" y="468">T-45</text>
+  <text class="tick" x="1510" y="468">T</text>
+
+  <!-- Sales lines -->
+  <polyline class="curr" points="72,334 120,324 168,318 216,302 264,292 312,278 360,252 408,238 456,220 496,208"/>
+  <polyline class="prior" points="72,338 120,336 168,330 216,326 264,322 312,318 360,314 408,308 456,302 496,296"/>
+  <polyline class="ly" points="72,346 120,340 168,336 216,330 264,324 312,318 360,314 408,308 456,304 496,300"/>
+
+  <!-- Tickets lines -->
+  <polyline class="curr" points="592,342 640,330 688,320 736,306 784,292 832,276 880,258 928,244 976,228 1016,216"/>
+  <polyline class="prior" points="592,348 640,344 688,340 736,334 784,328 832,320 880,314 928,306 976,298 1016,292"/>
+  <polyline class="ly" points="592,352 640,348 688,344 736,338 784,332 832,326 880,320 928,314 976,308 1016,304"/>
+
+  <!-- Avg basket lines -->
+  <polyline class="curr" points="1112,304 1160,302 1208,300 1256,298 1304,300 1352,302 1400,304 1448,306 1496,310 1536,314"/>
+  <polyline class="prior" points="1112,308 1160,306 1208,304 1256,302 1304,302 1352,304 1400,306 1448,308 1496,310 1536,312"/>
+  <polyline class="ly" points="1112,300 1160,300 1208,298 1256,298 1304,300 1352,302 1400,304 1448,306 1496,308 1536,310"/>
+
+  <!-- Last-point dots -->
+  <circle class="dot-curr" cx="496" cy="208" r="4"/>
+  <circle class="dot-prior" cx="496" cy="296" r="4"/>
+  <circle class="dot-ly" cx="496" cy="300" r="4"/>
+
+  <circle class="dot-curr" cx="1016" cy="216" r="4"/>
+  <circle class="dot-prior" cx="1016" cy="292" r="4"/>
+  <circle class="dot-ly" cx="1016" cy="304" r="4"/>
+
+  <circle class="dot-curr" cx="1536" cy="314" r="4"/>
+  <circle class="dot-prior" cx="1536" cy="312" r="4"/>
+  <circle class="dot-ly" cx="1536" cy="310" r="4"/>
+
+  <!-- Legend -->
+  <line class="curr" x1="60" y1="560" x2="100" y2="560"/>
+  <text class="note" x="108" y="565">Current trailing 90-day window (indexed)</text>
+  <line class="prior" x1="540" y1="560" x2="580" y2="560"/>
+  <text class="note" x="588" y="565">Prior trailing 90-day window</text>
+  <line class="ly" x1="950" y1="560" x2="990" y2="560"/>
+  <text class="note" x="998" y="565">Same period last year</text>
+
+  <text class="note" x="40" y="596">Interpretation: Sales and tickets show sustained relative lift, while average basket remains comparatively flat.</text>
+</svg>
