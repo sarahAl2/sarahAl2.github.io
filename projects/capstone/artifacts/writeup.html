@@ -91,6 +91,15 @@ div.csl-indent {
 <script src="writeup_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="writeup_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="writeup_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>
+footer,
+.footer,
+#quarto-footer,
+.quarto-footer,
+.nav-footer {
+  display: none !important;
+}
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -140,8 +149,9 @@ window.Quarto = {
   <li><a href="#data-and-data-engineering" id="toc-data-and-data-engineering" class="nav-link" data-scroll-target="#data-and-data-engineering"><span class="header-section-number">6</span> Data and Data Engineering</a>
   <ul class="collapse">
   <li><a href="#sources-and-implemented-schema" id="toc-sources-and-implemented-schema" class="nav-link" data-scroll-target="#sources-and-implemented-schema"><span class="header-section-number">6.1</span> Sources and implemented schema</a></li>
-  <li><a href="#source-status-at-m5-close" id="toc-source-status-at-m5-close" class="nav-link" data-scroll-target="#source-status-at-m5-close"><span class="header-section-number">6.2</span> Source status at M5 close</a></li>
-  <li><a href="#engineering-controls-used" id="toc-engineering-controls-used" class="nav-link" data-scroll-target="#engineering-controls-used"><span class="header-section-number">6.3</span> Engineering controls used</a></li>
+  <li><a href="#working-schema-is-lightspeed-only." id="toc-working-schema-is-lightspeed-only." class="nav-link" data-scroll-target="#working-schema-is-lightspeed-only."><span class="header-section-number">6.2</span> Working schema is Lightspeed only.</a></li>
+  <li><a href="#source-status-at-m5-close" id="toc-source-status-at-m5-close" class="nav-link" data-scroll-target="#source-status-at-m5-close"><span class="header-section-number">6.3</span> Source status at M5 close</a></li>
+  <li><a href="#engineering-controls-used" id="toc-engineering-controls-used" class="nav-link" data-scroll-target="#engineering-controls-used"><span class="header-section-number">6.4</span> Engineering controls used</a></li>
   </ul></li>
   <li><a href="#ethics-and-responsible-use" id="toc-ethics-and-responsible-use" class="nav-link" data-scroll-target="#ethics-and-responsible-use"><span class="header-section-number">7</span> Ethics and Responsible Use</a></li>
   <li><a href="#methods-and-evaluation" id="toc-methods-and-evaluation" class="nav-link" data-scroll-target="#methods-and-evaluation"><span class="header-section-number">8</span> Methods and Evaluation</a>
@@ -150,28 +160,25 @@ window.Quarto = {
   <li><a href="#analytical-procedure" id="toc-analytical-procedure" class="nav-link" data-scroll-target="#analytical-procedure"><span class="header-section-number">8.2</span> Analytical procedure</a></li>
   <li><a href="#evaluation-criteria" id="toc-evaluation-criteria" class="nav-link" data-scroll-target="#evaluation-criteria"><span class="header-section-number">8.3</span> Evaluation criteria</a></li>
   <li><a href="#scope-boundary" id="toc-scope-boundary" class="nav-link" data-scroll-target="#scope-boundary"><span class="header-section-number">8.4</span> Scope boundary</a></li>
+  <li><a href="#engineering-result-lightspeed-reconciliation-workflow-replaced" id="toc-engineering-result-lightspeed-reconciliation-workflow-replaced" class="nav-link" data-scroll-target="#engineering-result-lightspeed-reconciliation-workflow-replaced"><span class="header-section-number">8.5</span> Engineering result: Lightspeed reconciliation workflow replaced</a></li>
+  <li><a href="#analytical-result-growth-is-primarily-volume-led" id="toc-analytical-result-growth-is-primarily-volume-led" class="nav-link" data-scroll-target="#analytical-result-growth-is-primarily-volume-led"><span class="header-section-number">8.6</span> Analytical result: growth is primarily volume-led</a></li>
+  <li><a href="#visual-evidence-are-obfuscated-graphs" id="toc-visual-evidence-are-obfuscated-graphs" class="nav-link" data-scroll-target="#visual-evidence-are-obfuscated-graphs"><span class="header-section-number">8.7</span> Visual evidence are obfuscated graphs</a></li>
   </ul></li>
-  <li><a href="#results-and-visualizations" id="toc-results-and-visualizations" class="nav-link" data-scroll-target="#results-and-visualizations"><span class="header-section-number">9</span> Results and Visualizations</a>
+  <li><a href="#discussion-limitations-and-future-work" id="toc-discussion-limitations-and-future-work" class="nav-link" data-scroll-target="#discussion-limitations-and-future-work"><span class="header-section-number">9</span> Discussion, Limitations, and Future Work</a>
   <ul class="collapse">
-  <li><a href="#engineering-result-lightspeed-reconciliation-workflow-replaced" id="toc-engineering-result-lightspeed-reconciliation-workflow-replaced" class="nav-link" data-scroll-target="#engineering-result-lightspeed-reconciliation-workflow-replaced"><span class="header-section-number">9.1</span> Engineering result: Lightspeed reconciliation workflow replaced</a></li>
-  <li><a href="#analytical-result-growth-is-primarily-volume-led" id="toc-analytical-result-growth-is-primarily-volume-led" class="nav-link" data-scroll-target="#analytical-result-growth-is-primarily-volume-led"><span class="header-section-number">9.2</span> Analytical result: growth is primarily volume-led</a></li>
-  <li><a href="#visual-evidence" id="toc-visual-evidence" class="nav-link" data-scroll-target="#visual-evidence"><span class="header-section-number">9.3</span> Visual evidence</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">9.1</span> Discussion</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">9.2</span> Limitations</a></li>
+  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work"><span class="header-section-number">9.3</span> Future work</a></li>
   </ul></li>
-  <li><a href="#discussion-limitations-and-future-work" id="toc-discussion-limitations-and-future-work" class="nav-link" data-scroll-target="#discussion-limitations-and-future-work"><span class="header-section-number">10</span> Discussion, Limitations, and Future Work</a>
+  <li><a href="#conclusions-and-recommendations" id="toc-conclusions-and-recommendations" class="nav-link" data-scroll-target="#conclusions-and-recommendations"><span class="header-section-number">10</span> Conclusions and Recommendations</a></li>
+  <li><a href="#reproducibility-and-references" id="toc-reproducibility-and-references" class="nav-link" data-scroll-target="#reproducibility-and-references"><span class="header-section-number">11</span> Reproducibility and References</a>
   <ul class="collapse">
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">10.1</span> Discussion</a></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">10.2</span> Limitations</a></li>
-  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work"><span class="header-section-number">10.3</span> Future work</a></li>
-  </ul></li>
-  <li><a href="#conclusions-and-recommendations" id="toc-conclusions-and-recommendations" class="nav-link" data-scroll-target="#conclusions-and-recommendations"><span class="header-section-number">11</span> Conclusions and Recommendations</a></li>
-  <li><a href="#reproducibility-and-references" id="toc-reproducibility-and-references" class="nav-link" data-scroll-target="#reproducibility-and-references"><span class="header-section-number">12</span> Reproducibility and References</a>
-  <ul class="collapse">
-  <li><a href="#reproduction-workflow" id="toc-reproduction-workflow" class="nav-link" data-scroll-target="#reproduction-workflow"><span class="header-section-number">12.1</span> Reproduction workflow</a></li>
-  <li><a href="#key-repository-paths" id="toc-key-repository-paths" class="nav-link" data-scroll-target="#key-repository-paths"><span class="header-section-number">12.2</span> Key repository paths</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">12.3</span> References</a></li>
+  <li><a href="#reproduction-workflow" id="toc-reproduction-workflow" class="nav-link" data-scroll-target="#reproduction-workflow"><span class="header-section-number">11.1</span> Reproduction workflow</a></li>
+  <li><a href="#key-repository-paths" id="toc-key-repository-paths" class="nav-link" data-scroll-target="#key-repository-paths"><span class="header-section-number">11.2</span> Key repository paths</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">11.3</span> References</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="../../writeup.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="writeup.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -241,12 +248,12 @@ window.Quarto = {
 <section id="abstract" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Abstract</h1>
 <p>The Northwest Hub needs board-ready reporting without recurring spreadsheet reconciliation across Lightspeed, QuickBooks, and program/grant workflows. Spokes implements a reproducible reporting pipeline using scheduled Python ETL in GitHub Actions, a Neon Postgres warehouse, and Grafana dashboards hosted on Fly.io <span class="citation" data-cites="spokesrepo neondocs grafanadocs">(<a href="#ref-spokesrepo" role="doc-biblioref">The Northwest Hub and Contributors 2026</a>; <a href="#ref-neondocs" role="doc-biblioref">Neon 2026</a>; <a href="#ref-grafanadocs" role="doc-biblioref">Grafana Labs 2026</a>)</span>.</p>
-<p>This final write-up freezes claims to what was defended at poster session: the Lightspeed reporting slice is operational and reproducible, while QBO unattended OAuth hardening and program-impact metric development remain partial. The primary research question is answered for the Lightspeed scope: leadership can use live dashboards instead of manual POS spreadsheet reconciliation.</p>
+<p>The Lightspeed reporting slice is operational and reproducible, while QBO unattended OAuth hardening and program-impact metric development remain partial. The primary research question is answered for the Lightspeed scope: leadership can use live dashboards instead of manual POS spreadsheet reconciliation.</p>
 <p>The secondary research question is answered with descriptive trend analysis: directional-change comparisons show sales and ticket count rising faster than average basket size, indicating volume-led growth. All conclusions are bounded to validated data windows and known source limitations.</p>
 </section>
 <section id="introduction-problem-and-research-questions" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Introduction: Problem and Research Questions</h1>
-<p>The Northwest Hub tracks operations and finance across multiple systems, including Lightspeed R-Series POS and QuickBooks Online. Before this project, recurring leadership reporting depended on manual exports and spreadsheet reconciliation. This introduced delay, inconsistencies in metric definitions, and reproducibility risk.</p>
+<p>The Northwest Hub tracks operations and finance across multiple systems, including Lightspeed R-Series POS and QuickBooks Online. Before this project, recurring leadership reporting depended on manual exports and spreadsheet reconciliation. This introduced delay, inconsistencies in metric definitions, as well as extra cost to hire a third party bookkeeper to assemble monthly board packets.</p>
 <p>The capstone objective is both technical and operational: design a low-cost, maintainable reporting workflow that produces board-usable metrics on a predictable cadence with explicit quality boundaries.</p>
 <p><strong>Primary research question</strong></p>
 <p>How can The Northwest Hub maintain a reproducible, low-maintenance reporting workflow that consolidates key operations and financial indicators for board decision support?</p>
@@ -271,15 +278,16 @@ window.Quarto = {
 <li>Reduce manual reconciliation burden for recurring Lightspeed KPI reporting.</li>
 <li>Standardize metric definitions in SQL/query logic rather than ad-hoc spreadsheet formulas.</li>
 <li>Keep track and improve decision timeliness by making trend and freshness signals visible in one dashboard surface.</li>
+<li>Provide reproducible pipeline and dashboard artifacts so another analyst can maintain or extend the workflow without tribal knowledge.</li>
 </ol>
 </section>
 <section id="architecture-and-source-integration" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Architecture and Source Integration</h1>
 <ol type="1">
-<li><strong>Pipeline architecture:</strong> GitHub Actions + Neon + Grafana replaced a heavier orchestration path to reduce operational overhead while preserving reproducibility <span class="citation" data-cites="spokesrepo neondocs grafanadocs">(<a href="#ref-spokesrepo" role="doc-biblioref">The Northwest Hub and Contributors 2026</a>; <a href="#ref-neondocs" role="doc-biblioref">Neon 2026</a>; <a href="#ref-grafanadocs" role="doc-biblioref">Grafana Labs 2026</a>)</span>.</li>
+<li><strong>Pipeline architecture:</strong> GitHub Actions + Neon + Grafana on fly.io replaced a heavier orchestration path to reduce operational overhead while preserving reproducibility <span class="citation" data-cites="spokesrepo neondocs grafanadocs">(<a href="#ref-spokesrepo" role="doc-biblioref">The Northwest Hub and Contributors 2026</a>; <a href="#ref-neondocs" role="doc-biblioref">Neon 2026</a>; <a href="#ref-grafanadocs" role="doc-biblioref">Grafana Labs 2026</a>)</span>.</li>
 <li><strong>Source integration constraints:</strong> both QBO and Lightspeed rely on OAuth-based API access, with different operational failure modes and token lifecycle behavior <span class="citation" data-cites="quickbooksapi lightspeedapi rfc8252">(<a href="#ref-quickbooksapi" role="doc-biblioref">Intuit Developer 2026</a>; <a href="#ref-lightspeedapi" role="doc-biblioref">Lightspeed Developers 2026</a>; <a href="#ref-rfc8252" role="doc-biblioref">Denniss, Bradley, and Sakimura 2017</a>)</span>.</li>
 </ol>
-<p>This places the project in applied analytics engineering: reproducible descriptive reporting first, then expanded source completeness.</p>
+<p>This places the project in applied analytics engineering: reproducible descriptive reporting first, analytics engineering second, then expanded source completeness.</p>
 </section>
 <section id="data-and-data-engineering" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Data and Data Engineering</h1>
@@ -298,8 +306,75 @@ window.Quarto = {
 <li><code>view_grafana_vendor_trends</code></li>
 </ul>
 </section>
-<section id="source-status-at-m5-close" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="source-status-at-m5-close"><span class="header-section-number">6.2</span> Source status at M5 close</h2>
+<section id="working-schema-is-lightspeed-only." class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="working-schema-is-lightspeed-only."><span class="header-section-number">6.2</span> Working schema is Lightspeed only.</h2>
+<p>For the defended Lightspeed scope, the warehouse uses one non-normalized KPI table shape and normalized reporting projections.</p>
+<section id="non-normalized-table-shape-storage" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="non-normalized-table-shape-storage"><span class="header-section-number">6.2.1</span> Non-normalized table shape (storage)</h3>
+<p><code>financial_balances</code> rows where <code>source_system = 'Lightspeed'</code>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Grain</th>
+<th>Core columns</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>financial_balances</code> (Lightspeed slice)</td>
+<td><code>as_of_date + source_system + line_item</code></td>
+<td><code>as_of_date</code>, <code>source_system</code>, <code>section</code>, <code>subsection</code>, <code>line_item</code>, <code>amount</code>, <code>updated_at</code></td>
+<td>KPI values are stored in long format by <code>line_item</code> (<code>POS Sales</code>, <code>Ticket Count</code>, <code>Avg Basket Size</code>), which is intentionally non-normalized for ingestion simplicity and UPSERT stability.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="normalized-tableview-shape-analysis-ready" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="normalized-tableview-shape-analysis-ready"><span class="header-section-number">6.2.2</span> Normalized table/view shape (analysis-ready)</h3>
+<p>Normalized reporting structure is produced from the Lightspeed slice of <code>financial_balances</code> via SQL views in <code>src/transform_data.py</code>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Grain</th>
+<th>Core columns</th>
+<th>Lightspeed use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>view_grafana_weekly_ops</code></td>
+<td><code>reporting_week + section + subsection + line_item</code></td>
+<td><code>reporting_week</code>, <code>section</code>, <code>subsection</code>, <code>line_item</code>, <code>total_amount</code></td>
+<td>Weekly normalized aggregation for KPI trend panels.</td>
+</tr>
+<tr class="even">
+<td><code>view_grafana_monthly_pnl</code></td>
+<td><code>reporting_month + section + subsection + line_item</code></td>
+<td><code>reporting_month</code>, <code>section</code>, <code>subsection</code>, <code>line_item</code>, <code>total_amount</code></td>
+<td>Monthly normalized aggregation for board-facing summaries.</td>
+</tr>
+</tbody>
+</table>
+<p>In this milestone, there is no separate physical Lightspeed-only normalized fact table; normalization is applied in the reporting view layer.</p>
+</section>
+</section>
+<section id="source-status-at-m5-close" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="source-status-at-m5-close"><span class="header-section-number">6.3</span> Source status at M5 close</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -332,13 +407,26 @@ window.Quarto = {
 </tbody>
 </table>
 </section>
-<section id="engineering-controls-used" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="engineering-controls-used"><span class="header-section-number">6.3</span> Engineering controls used</h2>
+<section id="engineering-controls-used" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="engineering-controls-used"><span class="header-section-number">6.4</span> Engineering controls used</h2>
+<p>Controls implemented for the defended Lightspeed pipeline include:</p>
 <ol type="1">
-<li>Token lifecycle handling and persistence for Lightspeed OAuth refresh flow.</li>
-<li>UPSERT write semantics for Lightspeed KPI snapshots to prevent duplicate growth from retries.</li>
-<li>Backfill and missed-day repair routines to restore date coverage continuity.</li>
-<li>Explicit freshness and coverage checks used in dashboard interpretation.</li>
+<li><strong>OAuth token lifecycle control:</strong> access-token refresh is handled in code and refresh-token rotation is persisted so scheduled runs remain unattended.</li>
+<li><strong>Single-writer refresh protection:</strong> advisory-lock gating prevents concurrent refresh writes from revoking shared token chains.</li>
+<li><strong>Credential compartmentalization:</strong> secrets are loaded from environment variables/warehouse token storage, not committed to source control.</li>
+<li><strong>Scope minimization:</strong> API scope set is explicitly constrained in code to required Lightspeed read/reporting capabilities.</li>
+<li><strong>Cloudflare compatibility hardening:</strong> browser user-agent headers are applied to prevent known non-browser request blocking.</li>
+<li><strong>Network resilience:</strong> retry/backoff logic is applied for transient API and connectivity failures.</li>
+<li><strong>Load idempotency:</strong> UPSERT semantics on <code>(as_of_date, source_system, line_item)</code> prevent duplicate growth on retried or repeated loads.</li>
+<li><strong>Schema-level uniqueness guard:</strong> unique-constraint migration/guard is applied to align table constraints with UPSERT conflict keys.</li>
+<li><strong>Safe database URL handling:</strong> connection strings are sanitized for quote/whitespace edge cases before connecting.</li>
+<li><strong>Dry-run by default:</strong> pull scripts default to fetch/print behavior; warehouse writes require explicit <code>--load</code>.</li>
+<li><strong>Historical backfill control:</strong> bounded monthly backfill logic with existing-snapshot checks reduces unnecessary rewrites and API load.</li>
+<li><strong>Missing-day repair routine:</strong> dedicated daily snapshot recovery reconstructs cumulative KPI rows for coverage gaps.</li>
+<li><strong>Post-load dedup validation:</strong> dedicated duplicate-detection/fix workflow verifies uniqueness and repairs drift when needed.</li>
+<li><strong>Coverage completeness checks:</strong> monthly expected-line-item checks flag sparse periods before interpretation.</li>
+<li><strong>Freshness observability control:</strong> dashboard staleness is computed from <code>updated_at</code> to represent true load recency.</li>
+<li><strong>Claim-boundary control:</strong> Lightspeed-only production claims are separated from partial QBO/program paths in evidence and conclusions.</li>
 </ol>
 <p>Freshness signals in the Data Health Checks dashboard are computed from warehouse write timestamps (<code>updated_at</code>) rather than date-only snapshot keys (<code>as_of_date</code>), so the lag indicator represents true hourly load recency.</p>
 </section>
@@ -352,13 +440,14 @@ window.Quarto = {
 <ol type="1">
 <li>Public-facing artifacts do not expose raw sensitive records.</li>
 <li>Credentials are handled through environment variables and secret stores, not committed in source.</li>
-<li>Findings are bounded to validated windows and explicitly label partial source coverage.</li>
+<li>Findings are bounded to validated windows and explicitly label partial source coverage. 4.spokes legal and ethical compliance is guided by the NDA with The Northwest Hub, which governs data access and use.</li>
 </ol>
 <p><strong>Interpretation boundaries</strong></p>
 <ol type="1">
 <li>Results are descriptive, not causal.</li>
 <li>Trend changes are decision signals, not proof of intervention impact.</li>
 <li>Historical gaps and source incompleteness are reported as limitations, not silently ignored.</li>
+<li>Findings are intended for internal decision support, not public dissemination without context.</li>
 </ol>
 </section>
 <section id="methods-and-evaluation" class="level1" data-number="8">
@@ -370,24 +459,39 @@ window.Quarto = {
 <li>Build a reproducible source-to-dashboard pipeline for recurring board reporting.</li>
 <li>Quantify KPI direction and magnitude using trailing-window comparisons.</li>
 <li>Attach confidence boundaries through freshness and coverage checks.</li>
+<li>Document the pipeline and dashboard so another analyst can reproduce outputs without tribal knowledge.</li>
+<li>Evaluate the defended Lightspeed slice of the pipeline for operational readiness and analytical defensibility.</li>
 </ol>
 </section>
 <section id="analytical-procedure" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="analytical-procedure"><span class="header-section-number">8.2</span> Analytical procedure</h2>
 <ol type="1">
-<li>Pull completed Lightspeed sales and transform into KPI rows (<code>POS Sales</code>, <code>Ticket Count</code>, <code>Avg Basket Size</code>).</li>
-<li>Load KPI snapshots into <code>financial_balances</code>.</li>
-<li>Build weekly/monthly trend and rollup views.</li>
-<li>Compute directional changes for trailing windows against:
+<li>Execute Lightspeed ingestion in dry-run mode to validate token health, API response shape, and mapped KPI rows before any write operation.</li>
+<li>Re-run ingestion with <code>--load</code> after validation to UPSERT the daily snapshot KPI rows (<code>POS Sales</code>, <code>Ticket Count</code>, <code>Avg Basket Size</code>) into <code>financial_balances</code>.</li>
+<li>Verify snapshot integrity by checking the expected three-line-item presence per Lightspeed <code>as_of_date</code> and resolving sparse/duplicate dates before analysis.</li>
+<li>Build reporting projections in SQL views (<code>view_grafana_weekly_ops</code>, <code>view_grafana_monthly_pnl</code>) to normalize KPI totals by reporting period.</li>
+<li>Construct trailing 90-day analysis windows for each KPI from the warehouse snapshot and compute comparison baselines.</li>
+<li>Define two comparison references for each KPI:</li>
+</ol>
 <ul>
 <li>prior 90-day window</li>
 <li>same period last year (SPLY)</li>
-</ul></li>
+</ul>
+<ol start="7" type="1">
+<li>Compute directional-change percentages against each reference window and compare relative movement across sales, ticket count, and average basket.</li>
+<li>Cross-check interpretation with freshness/coverage indicators (<code>updated_at</code> recency and expected line-item completeness) before finalizing claims.</li>
+<li>Classify growth pattern as volume-led, basket-led, or mixed based on whether ticket and sales movement outpace basket movement in the same evaluated window.</li>
+<li>Apply claim-boundary rules: report only validated Lightspeed-supported findings and explicitly label non-Lightspeed paths as partial/pending.</li>
 </ol>
 <p>Directional change is calculated as:</p>
 <p><span class="math display">\[
-\text{Pct Change} = \frac{\text{Current Window} - \text{Comparison Window}}{\text{Comparison Window}} \times 100
+\mathrm{PctChange}(\%) = 100 \times \left(\frac{C}{B} - 1\right)
 \]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(C\)</span> = current-window value</li>
+<li><span class="math inline">\(B\)</span> = baseline value (prior 90-day window or SPLY)</li>
+</ul>
 </section>
 <section id="evaluation-criteria" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="evaluation-criteria"><span class="header-section-number">8.3</span> Evaluation criteria</h2>
@@ -402,17 +506,16 @@ window.Quarto = {
 <li>Claims trace to explicit query logic and warehouse records.</li>
 <li>Every comparative claim states its reference window.</li>
 <li>Limitations are attached when source coverage is partial.</li>
+<li>Analysis would benifit from all 3 data sources, but defended claims are bounded to the Lightspeed slice.</li>
+<li>Directional-change interpretation is consistent across KPIs and comparison windows.</li>
 </ol>
 </section>
 <section id="scope-boundary" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="scope-boundary"><span class="header-section-number">8.4</span> Scope boundary</h2>
-<p>No predictive model training is used. Train/validation/holdout paradigms are not applicable to this milestone.</p>
+<p>No predictive model training is used. Train/validation/holdout paradigms are not applicable to this milestone. Initial intention was to include QBO and program-impact metrics, and project impacts STEP from google sheets, and produce a predictive model for future sales, but the defended milestone scope is limited to Lightspeed KPI reporting and descriptive trend analysis due to data access delays and time constrains.</p>
 </section>
-</section>
-<section id="results-and-visualizations" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Results and Visualizations</h1>
-<section id="engineering-result-lightspeed-reconciliation-workflow-replaced" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="engineering-result-lightspeed-reconciliation-workflow-replaced"><span class="header-section-number">9.1</span> Engineering result: Lightspeed reconciliation workflow replaced</h2>
+<section id="engineering-result-lightspeed-reconciliation-workflow-replaced" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="engineering-result-lightspeed-reconciliation-workflow-replaced"><span class="header-section-number">8.5</span> Engineering result: Lightspeed reconciliation workflow replaced</h2>
 <p>For the Lightspeed scope, the project meets its core operational goal. Leadership can review recurring KPIs from the live dashboard instead of manually reconciling POS exports.</p>
 <p>Evidence includes:</p>
 <ol type="1">
@@ -421,8 +524,8 @@ window.Quarto = {
 <li>Warehouse and dashboard artifacts versioned in repository paths.</li>
 </ol>
 </section>
-<section id="analytical-result-growth-is-primarily-volume-led" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="analytical-result-growth-is-primarily-volume-led"><span class="header-section-number">9.2</span> Analytical result: growth is primarily volume-led</h2>
+<section id="analytical-result-growth-is-primarily-volume-led" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="analytical-result-growth-is-primarily-volume-led"><span class="header-section-number">8.6</span> Analytical result: growth is primarily volume-led</h2>
 <p>Trailing-window directional-change results defended at poster session:</p>
 <table class="caption-top table">
 <thead>
@@ -452,8 +555,8 @@ window.Quarto = {
 </table>
 <p>Interpretation: sales and ticket growth outpace basket growth, indicating traffic/transaction volume is the dominant driver in the evaluated period.</p>
 </section>
-<section id="visual-evidence" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="visual-evidence"><span class="header-section-number">9.3</span> Visual evidence</h2>
+<section id="visual-evidence-are-obfuscated-graphs" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="visual-evidence-are-obfuscated-graphs"><span class="header-section-number">8.7</span> Visual evidence are obfuscated graphs</h2>
 <div id="fig-pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Spokes pipeline architecture from source APIs to dashboard outputs.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -486,32 +589,37 @@ Figure&nbsp;3: Live trend panel pattern used for interpretation (indexed/obfusca
 </div>
 </section>
 </section>
-<section id="discussion-limitations-and-future-work" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Discussion, Limitations, and Future Work</h1>
-<section id="discussion" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="discussion"><span class="header-section-number">10.1</span> Discussion</h2>
+<section id="discussion-limitations-and-future-work" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Discussion, Limitations, and Future Work</h1>
+<section id="discussion" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="discussion"><span class="header-section-number">9.1</span> Discussion</h2>
 <p>The strongest contribution is not only trend insight but process reliability: metrics now flow through a repeatable, inspectable path with explicit confidence signals. That is a practical governance gain for board reporting.</p>
+<p>An important implication is that automation changes the decision conversation, not just the data refresh speed. Before this pipeline, stakeholders often spent their energy debating spreadsheet versions and reconciliation steps. With a reproducible workflow, that energy can shift toward higher-value questions: which changes are meaningful, which are temporary noise, and what operational action is justified.</p>
+<p>This also introduces a productive tension: as dashboards become easier to trust, teams may be tempted to over-trust point estimates. The capstone intentionally counterbalances that risk with freshness checks, coverage signals, and explicit claim boundaries. In practice, the most useful output is not a single KPI value, but a decision context that includes recency, completeness, and uncertainty.</p>
+<p>For a community-serving organization, this distinction matters. Reporting systems do not merely summarize performance; they influence decisions that can affect service access, staffing priorities, and resource allocation. A robust analytics workflow is therefore both a technical artifact and a governance artifact: it should make decisions faster, while making assumptions and limits more visible.</p>
 </section>
-<section id="limitations" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="limitations"><span class="header-section-number">10.2</span> Limitations</h2>
+<section id="limitations" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="limitations"><span class="header-section-number">9.2</span> Limitations</h2>
 <ol type="1">
 <li>Source maturity is uneven: Lightspeed is operational; QBO unattended flow remains incomplete.</li>
 <li>Program-impact table values are text-typed, limiting numeric analytics without additional typing/validation.</li>
 <li>This work supports descriptive decision intelligence, not causal attribution.</li>
+<li>Communication with the hub resulted in less outcome due to time constraints and source access delays, so the defended scope is limited to Lightspeed KPI reporting and descriptive trend analysis.</li>
 </ol>
 </section>
-<section id="future-work" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="future-work"><span class="header-section-number">10.3</span> Future work</h2>
+<section id="future-work" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="future-work"><span class="header-section-number">9.3</span> Future work</h2>
 <ol type="1">
 <li>Complete QBO unattended OAuth hardening and remove manual token dependency.</li>
 <li>Harden program-impact schema typing and validation rules for numeric indicators.</li>
 <li>Expand dashboard confidence checks to source-specific quality flags and alerting.</li>
 <li>Introduce optional dimensional decomposition if broader cross-domain analytics requires it.</li>
+<li>keep the runbook and dashboard documentation synchronized with the source-of-truth map so <em>handoff</em> instructions stay aligned with live behavior.</li>
 </ol>
 </section>
 </section>
-<section id="conclusions-and-recommendations" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Conclusions and Recommendations</h1>
+<section id="conclusions-and-recommendations" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Conclusions and Recommendations</h1>
 <p>Spokes achieved a production-relevant milestone for the Lightspeed reporting slice: recurring board KPI review can be performed from reproducible warehouse-backed dashboards rather than manual spreadsheet reconciliation.</p>
 <p>The current analytical finding is actionable: growth is volume-led more than basket-led in the evaluated windows. Near-term operations should prioritize traffic and repeat-visit levers while testing basket-lift tactics in controlled cycles.</p>
 <p>Recommendations:</p>
@@ -522,10 +630,10 @@ Figure&nbsp;3: Live trend panel pattern used for interpretation (indexed/obfusca
 <li><p>Keep runbook and dashboard docs synchronized using the documentation precedence map (<code>docs/documentation/source-of-truth.md</code>) so handoff instructions stay aligned with live behavior.</p></li>
 </ol>
 </section>
-<section id="reproducibility-and-references" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Reproducibility and References</h1>
-<section id="reproduction-workflow" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="reproduction-workflow"><span class="header-section-number">12.1</span> Reproduction workflow</h2>
+<section id="reproducibility-and-references" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Reproducibility and References</h1>
+<section id="reproduction-workflow" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="reproduction-workflow"><span class="header-section-number">11.1</span> Reproduction workflow</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) From a local clone of thenorthwesthub/spokes</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> spokes</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span>
@@ -550,8 +658,8 @@ Figure&nbsp;3: Live trend panel pattern used for interpretation (indexed/obfusca
 <li>QBO POC currently depends on short-lived access tokens unless further hardening is applied.</li>
 </ol>
 </section>
-<section id="key-repository-paths" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="key-repository-paths"><span class="header-section-number">12.2</span> Key repository paths</h2>
+<section id="key-repository-paths" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="key-repository-paths"><span class="header-section-number">11.2</span> Key repository paths</h2>
 <ol type="1">
 <li><code>src/fin_balance.py</code></li>
 <li><code>src/lightspeed_pull.py</code></li>
@@ -567,8 +675,8 @@ Figure&nbsp;3: Live trend panel pattern used for interpretation (indexed/obfusca
 <li><code>docs/documentation/source-of-truth.md</code></li>
 </ol>
 </section>
-<section id="references" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="references"><span class="header-section-number">12.3</span> References</h2>
+<section id="references" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="references"><span class="header-section-number">11.3</span> References</h2>
 <p>Primary references and API/documentation sources are cited in-text and listed in the bibliography <span class="citation" data-cites="spokesrepo quickbooksapi lightspeedapi grafanadocs neondocs rfc8252">(<a href="#ref-spokesrepo" role="doc-biblioref">The Northwest Hub and Contributors 2026</a>; <a href="#ref-quickbooksapi" role="doc-biblioref">Intuit Developer 2026</a>; <a href="#ref-lightspeedapi" role="doc-biblioref">Lightspeed Developers 2026</a>; <a href="#ref-grafanadocs" role="doc-biblioref">Grafana Labs 2026</a>; <a href="#ref-neondocs" role="doc-biblioref">Neon 2026</a>; <a href="#ref-rfc8252" role="doc-biblioref">Denniss, Bradley, and Sakimura 2017</a>)</span>.</p>
 
 </section>
