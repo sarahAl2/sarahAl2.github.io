@@ -10,9 +10,12 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/sarahAl2
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/sarah-alhusaynat
     - icon: envelope
       text: Email
-      href: mailto:saalhusaynat@willamette.edu
+      href: https://mail.google.com/mail/?view=cm&fs=1&to=saalhusaynat@willamette.edu
 ---
 
 ## Spokes: Reproducible Board Reporting for The Northwest Hub
