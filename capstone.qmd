@@ -54,6 +54,12 @@ Key outcome: board-facing reporting moved from ad hoc assembly toward a repeatab
 
 Caveat: some upstream systems and credentials remain organization-bound, so full production execution depends on authorized access.
 
+## Results highlights
+
+- **Pipeline architecture (hero visual):** The diagram above shows the end-to-end flow from source systems to warehouse and dashboard outputs used in final reporting.
+- **Final findings (write-up):** The complete analysis narrative, methods, and conclusions are documented in the final write-up artifacts linked below.
+- **Communication artifact (poster):** The poster PDF summarizes the project question, approach, and outcomes for a non-technical board audience.
+
 ## The full write-up
 
 - [Read the final write-up (HTML)](projects/capstone/artifacts/writeup.html){.btn .btn-primary}
@@ -64,21 +70,28 @@ Caveat: some upstream systems and credentials remain organization-bound, so full
 
 ## Reproducibility
 
-To reproduce the core workflow at a high level:
+To reproduce this published portfolio and capstone artifacts:
 
-1. Clone the project repository and open it in VS Code.
-2. Install required dependencies for the ETL and render stack.
-3. Run ingestion scripts in dry-run mode first, then run load mode only after validation.
-4. Re-render deliverables and compare dashboard freshness/coverage outputs.
+```bash
+git clone https://github.com/sarahAl2/sarahAl2.github.io.git
+cd sarahAl2.github.io
+quarto render
+quarto preview
+```
 
-For environment-specific details, use the documented runbooks and notes included with the published materials.
+For workflow details and setup notes, see the repository README:
+[github.com/sarahAl2/sarahAl2.github.io](https://github.com/sarahAl2/sarahAl2.github.io)
+
+For full project methods and implementation context, use the final write-up:
+[projects/capstone/artifacts/writeup.html](projects/capstone/artifacts/writeup.html)
 
 ## Ethics, licensing, and attribution
 
-- Data rights and system access remain with the source organizations and platform terms.
-- No secrets, private credentials, or protected internal tokens are published on this site.
-- This public page provides artifacts and methods for academic and portfolio review; production operations require authorized access.
-- Platform and tool attributions include Quarto, GitHub Pages, Neon Postgres, and Grafana.
+- **Code and content license status:** No separate open-source license file is currently declared in this portfolio repository; content is shared for academic and portfolio review.
+- **Data rights and constraints:** Data rights and system access remain with source organizations and platform terms (QuickBooks Online and Lightspeed R-Series).
+- **Privacy and security:** No secrets, private credentials, or protected internal tokens are published on this site.
+- **Use constraints:** Production execution of the full pipeline requires authorized organizational credentials and environment access.
+- **Attribution:** Platform/tool attributions include Quarto, GitHub Pages, Neon Postgres, and Grafana.
 
 ## Dig deeper
 
