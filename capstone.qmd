@@ -2,7 +2,7 @@
 title: "Capstone: Spokes Reproducible Board Reporting"
 subtitle: "An analytics pipeline and dashboard workflow for board-ready nonprofit reporting."
 date: 2026-07-27
-image: projects/capstone/featured.svg
+image: projects/capstone/poster-results.png
 categories: [capstone, data-engineering, analytics]
 toc: true
 ---
@@ -48,7 +48,11 @@ way that is readable to non-technical decision-makers.
 The project produced a reproducible pipeline and a decision-facing dashboard that
 made data recency and coverage auditable at a glance.
 
-![Spokes pipeline and dashboard flow used in final reporting deliverables.](projects/capstone/featured.svg){fig-alt="Spokes pipeline architecture figure" width="90%"}
+Live trend analytics were delivered as a rolling **90-day trailing** view so
+stakeholders can monitor movement over time rather than relying on one-point
+snapshots.
+
+![Poster excerpt highlighting the live 90-day trailing trend analytics and key findings used in final reporting.](projects/capstone/poster-results.png){fig-alt="Poster results figure with live trend analytics and findings" width="95%"}
 
 Key outcome: board-facing reporting moved from ad hoc assembly toward a repeatable workflow with documented handoff steps.
 
@@ -57,6 +61,7 @@ Caveat: some upstream systems and credentials remain organization-bound, so full
 ## Results highlights
 
 - **Pipeline architecture (hero visual):** The diagram above shows the end-to-end flow from source systems to warehouse and dashboard outputs used in final reporting.
+- **Live trend analytics (90-day trailing):** Dashboard views include a trailing 90-day window to make recency and directional change explicit for board and operations reporting.
 - **Final findings (write-up):** The complete analysis narrative, methods, and conclusions are documented in the final write-up artifacts linked below.
 - **Communication artifact (poster):** The poster PDF summarizes the project question, approach, and outcomes for a non-technical board audience.
 
